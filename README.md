@@ -1,2 +1,3 @@
-# Calculadora_de_-reas
+# Calculadora_de_areas
+
 Eu fiz um programa que de acordo com as suas respostas de medidas da sua figura, ele consegue calcular a sua área, nesse programa eu também coloquei todas as opções de áreas para você escolher uma delas e começar a responder as medidas, além disso eu coloquei uma segunda chance para aqueles que não conseguirem escrever da forma correta, mas caso você escreva errado duas vezes terá que reiniciar o programa. Para fazer esse programa primeiramente eu tive que criar algoritmos para cada uma das áreas e depois tive que juntar em um só programa para que melhora-se o uso, para fazer essa junção eu tive que fazer a função IF para que assim sempre que você escrever um tipo de área você consiga fazer o cálculo que deseja fazer; Boa sorte com o programa e eu espero que aprenda alguma coisa com ele :)
