@@ -3,11 +3,12 @@
 # O que a variável final e tipo_de_area2 recebe, não importa, por isso eu coloquei'oi' e 'olá'
 
 final = ('olá')
+final = str('olá')
 tipo_de_area2 = ('oi')
 tipo_de_area2 = str(tipo_de_area2)
 
 peso = 2
-peso = int(peso)
+peso = float(peso)
 
 print('Lhe darei algumas opções de tipos de areas!')
 print('Você escolhe uma das opções e depois responde as perguntas sobre as medidas das suas figuras')
@@ -26,6 +27,7 @@ print('Círculo')
 print(' ')
 print(' ')
 tipo_de_area = input('Qual é o tipo de área que você quer? ')
+tipo_de_area = str(tipo_de_area)
 
 if tipo_de_area.lower() == ('quadrado'):
   lado = input('Qual é o valor do lado do quadrado? ')
@@ -34,7 +36,7 @@ if tipo_de_area.lower() == ('quadrado'):
   print(' ')
   print('Essa é a área do quadrado', area_do_quadrado)
 
-if tipo_de_area.lower() == ('retângulo'):
+if tipo_de_area.lower() == ('retângulo') or tipo_de_area.lower() == ('retangulo'):
   base = input('Qual é o valor da base do retângulo? ')
   altura = input('Qual é o valor da altura do retângulo? ')
   base = float(base)
@@ -43,7 +45,7 @@ if tipo_de_area.lower() == ('retângulo'):
   print(' ')
   print('Essa é a área do retângulo', area_do_retangulo)
 
-if tipo_de_area.lower() == ('triângulo'):
+if tipo_de_area.lower() == ('triângulo') or tipo_de_area.lower() == ('triangulo'):
   base2 = input('Qual é o valor da base do triângulo? ')
   altura2 = input('Qual é o valor da altura do triângulo? ')
   base2 = float(base2)
@@ -52,7 +54,7 @@ if tipo_de_area.lower() == ('triângulo'):
   print(' ')
   print('Essa é a área do triângulo', area_do_triangulo)
 
-if tipo_de_area.lower() == ('trapézio'):
+if tipo_de_area.lower() == ('trapézio') or tipo_de_area.lower() == ('trapezio'):
   base_menor = input('Qual é o valor da base menor? ')
   base_maior = input('Qual é o valor da base maior? ')
   altura3 = input('Qual é a altura? ')
@@ -81,7 +83,7 @@ if tipo_de_area.lower() == ('paralelogramo'):
   print(' ')
   print("Essa é a área do paralelogramo", area_do_paralelogramo)
 
-if tipo_de_area.lower() == ('círculo'):
+if tipo_de_area.lower() == ('círculo') or tipo_de_area.lower() == ('circulo'):
   valor_de_pi = float(3.14)
   raio = input('Qual é o valor do raio? ')
   raio = float(raio)
@@ -97,17 +99,31 @@ if tipo_de_area.lower() != ('quadrado'):
         if tipo_de_area.lower() != ('losango'):
           if tipo_de_area.lower() != ('paralelogramo'):
             if tipo_de_area.lower() != ('círculo'):
-              print(' ')
-              tipo_de_area2 = input('Você errou, porfavor digite novamente, igual os exemplos de cima :) ')
-
+              if tipo_de_area.lower() != ('retangulo'):
+                if tipo_de_area.lower() != ('triangulo'):
+                  if tipo_de_area.lower() != ('trapezio'):
+                    if tipo_de_area.lower() != ('circulo'):
+                       print(' ')
+                       print(' ')
+                       print('Quadrado')
+                       print('Retângulo')
+                       print('Triângulo') 
+                       print('Trapézio')
+                       print('Losango')
+                       print('Paralelogramo')
+                       print('Círculo')
+                       print(' ')
+                       print(' ')
+                       tipo_de_area2 = input('Você errou, porfavor digite novamente, igual os exemplos de cima :)') 
 
 if tipo_de_area2.lower() == ('quadrado'):
    lado = input('Qual é o valor do lado do quadrado? ')
-   lado = float(lado) 
+   lado = float(lado)
+   area_do_quadrado = lado * lado 
    print(' ')
    print('Essa é a área do quadrado', area_do_quadrado)
 
-if tipo_de_area2.lower() == ('retângulo'):
+if tipo_de_area2.lower() == ('retângulo') or tipo_de_area2.lower() == ('retangulo'):
    base = input('Qual é o valor da base do retângulo? ')
    altura = input('Qual é o valor da altura do retângulo? ')
    base = float(base)
@@ -116,7 +132,7 @@ if tipo_de_area2.lower() == ('retângulo'):
    print(' ')
    print('Essa é a área do retângulo', area_do_retangulo)
 
-if tipo_de_area2.lower() == ('triângulo'):
+if tipo_de_area2.lower() == ('triângulo') or tipo_de_area2.lower() == ('triangulo'):
    base2 = input('Qual é o valor da base do triângulo? ')
    altura2 = input('Qual é o valor da altura do triângulo? ')
    base2 = float(base2)
@@ -125,7 +141,7 @@ if tipo_de_area2.lower() == ('triângulo'):
    print(' ')
    print('Essa é a área do triângulo', area_do_triangulo)
 
-if tipo_de_area2.lower() == ('trapézio'):
+if tipo_de_area2.lower() == ('trapézio') or tipo_de_area2.lower() == ('trapezio'):
    base_menor = input('Qual é o valor da base menor? ')
    base_maior = input('Qual é o valor da base maior? ')
    altura3 = input('Qual é o valor da altura? ')
@@ -154,7 +170,7 @@ if tipo_de_area2.lower() == ('paralelogramo'):
    print(' ')
    print('Essa é a área do paralelogramo', area_do_paralelogramo)
 
-if tipo_de_area2.lower() == ('círculo'):
+if tipo_de_area2.lower() == ('círculo') or tipo_de_area2.lower() == ('circulo'):
    valor_de_pi = float(3.14)
    raio = input('Qual é o valor do raio? ')
    raio = float(raio)
@@ -170,11 +186,16 @@ if tipo_de_area2.lower() != ('quadrado'):
         if tipo_de_area2.lower() != ('losango'):
           if tipo_de_area2.lower() != ('paralelogramo'):
             if tipo_de_area2.lower() != ('círculo'):
-              if tipo_de_area2 != ('oi'):
-                final = ('Você errou duas vezes, por favor reinicie o programa para tentar novamente ')
-                print(' ')
-                print(' ')
-                print(final)
+              if tipo_de_area2.lower() != ('retangulo'):
+                if tipo_de_area2.lower() != ('triangulo'):
+                  if tipo_de_area2.lower() != ('trapezio'):
+                    if tipo_de_area2.lower() != ('circulo'):
+                       if tipo_de_area2 != ('oi'):
+                          final = ('Você errou duas vezes, por favor reinicie o programa para tentar novamente ')
+                          print(' ')
+                          print(' ')
+                          print(final)
+              
 
 if final == ('olá'):
   final2 = ('Você terminou o programa, se você quiser fazer outro calculo, por favor reinicie')
@@ -183,5 +204,5 @@ if final == ('olá'):
   print(final2)
 
 # Criado por JoseRennan
-# Data 10/01/2021 e 11/01/2021
-# Espero que goste e em caso de uso que dê meus créditos no github
+# Data 10/01/2021 e 11/01/2021 e 12/01/2021 e 13/01/2021
+# Não é um grande programa mas, foi um dos meus primeiros e me deu bastante trabalho, espero que goste :)
